@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Mars
+        </h1>
+        <hr class="my-4">
+        <p class = "lead">Scraped from multiple sources</p>
+    </div>
+
+    <div class = 'row'>
+        <div class = 'col-md-6'>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                <h2 class="display-4">Latest Mars News</h2>
+                <p class="lead">{{final_dict.nasa_data[0]}}</p>
+                <p>
+                    {{final_dict.nasa_data[1]}}
+                </p>
+                </div>
+            </div>
+        </div> 
+        <div class = col-md-6>
+            <div class = "row">
+                {% for item in final_dict.hemisphere_images %} 
+                    <div class = "col-sm-1.5">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src={{ item }} alt="Card image cap">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>     
+    </div>
+    <div class = "row">
+        {% for item in final_dict.facts_data %}
+        <div class = "col-md-4">
+            <table class="table table-dark active">
+                        <tbody>
+                            {% for key, value in item.items() %}
+                            <tr>
+                                <td> {{ key }} </td>
+                                <td> {{ value }} </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    
+                    
+            </table>
+        </div>
+        {% endfor %}
+    </div>   
+      
+</body>
+</html>

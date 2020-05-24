@@ -1,0 +1,106 @@
+h1 h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-family: BlenderProBold,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 0;
+}
+
+.display-4 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-family: BlenderProBold,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 0;
+}
+
+.jumbotron h1:after {
+    content: "";
+    background: url(/build/images/home/detail-header-bottom-black-d0fd4a12.svg);
+    height: 4px;
+    width: 306px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+img {
+    height: 50%;
+    width: 50%;
+}
+
+.jumbotron {
+    margin: 0px;
+    padding: 0px;
+    background: #925858;
+}
+
+.lead {
+    font-family: BlenderProBold,sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+
+body {
+    background: #925858;
+  }
+
+.row {
+    width: 1000px;
+    height: 600px;
+}
+
+tbody {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    font-family: BlenderProBold,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 0;
+}
+
+td {
+    width: 50%;
+}
+tr {
+    height: 50%;
+}
+p {
+    font-family: BlenderProBold,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 0;
+}
+
+.row {
+    background: #925858;
+}
