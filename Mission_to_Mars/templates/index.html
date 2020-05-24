@@ -14,7 +14,18 @@
         <hr class="my-4">
         <p class = "lead">Scraped from multiple sources</p>
     </div>
-
+    <div class = "row">
+        <img src={{ final_dict.jpl_data }} class="img-fluid" alt="Responsive image">
+        <div class = "col-md-2">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Mars Weather for Today</h5>
+                  <p class="card-text">{{ final_dict.weather_data }}</p>
+                  <a href="https://twitter.com/marswxreport?lang=en" class="card-link">Mars Weather Twitter</a>
+                </div>
+              </div>
+        </div>
+    </div>
     <div class = 'row'>
         <div class = 'col-md-6'>
             <div class="jumbotron jumbotron-fluid">
@@ -41,7 +52,7 @@
     </div>
     <div class = "row">
         {% for item in final_dict.facts_data %}
-        <div class = "col-md-4">
+        <div class = "col-md-3">
             <table class="table table-dark active">
                         <tbody>
                             {% for key, value in item.items() %}
@@ -51,11 +62,10 @@
                             </tr>
                             {% endfor %}
                         </tbody>
-                    
-                    
             </table>
         </div>
         {% endfor %}
+        
     </div>   
       
 </body>
